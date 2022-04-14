@@ -109,7 +109,9 @@ PitchData2018 <- read_csv("PitchData2018.csv",
 
 tab_pitch <- PitchData2018 %>% 
   gt() %>% 
-  cols_hide(columns = vars(player_id, year, n_fastball_formatted, fastball_range_speed)) %>% 
+  cols_hide(columns = vars(player_id, year, 
+                           n_fastball_formatted, 
+                           fastball_range_speed)) %>% 
   tab_header(title = "2018 MLB Pitch Data",
     subtitle = md("Data provided by Baseball Savant")) %>% 
   tab_options(heading.background.color = "darkred")
@@ -138,7 +140,7 @@ plot1 <- garden_harvest %>%
   mutate(cum_wt_lbs = cumsum(daily_wt_lbs)) %>% 
   ggplot(aes(x = date, y = cum_wt_lbs, color = variety)) +
   geom_line() +
-  labs(x = "Date of Harvest", y = "Cumulative Weight of Harvests (lbs)", color = "Type of Beet") +
+  labs(x = "Date of Harvest", y = "Cumulative Harvest Weight (lbs)", color = "Type of Beet") +
   ggtitle("Weight of Beet Harvest Over Time") +
   theme(plot.title = element_text(hjust = 0.5)) +
   scale_color_manual(values = c("#c9c30c", "#1bcc4a", "#85076e"))
@@ -153,7 +155,8 @@ plot2 <- garden_harvest %>%
   labs(x = "Total Harvest Weight (lbs)", y = "Variety of Beet") +
   theme(plot.title = element_text(hjust = 0.5))
 
-plot1/plot2
+plot1/plot2 +
+  plot_annotation(title = "Beet Harvests")
 ```
   
   
@@ -212,7 +215,6 @@ course_availability <- fall2017 %>%
   html_elements("td.class-schedule-label:nth-child(7)") %>% 
   html_text2() %>% 
   str_sub(start = 14)
-head(course_availability)
 
 course_geneds <- fall2017 %>% 
   html_elements("#content p:nth-child(2)") %>% 
@@ -224,7 +226,8 @@ course_description <- fall2017 %>%
   html_elements(".collapsed p:nth-child(1)") %>% 
   html_text2() %>% 
   str_replace_all("\n", " ") %>% 
-  str_replace_all("\r", "")
+  str_replace_all("\r", "") %>% 
+  str_sub(start = 2)
 
 course_df <- tibble(Number=course_nums, Name=course_names, Days = course_days, 
                     Time = course_times, Room = course_room, 
@@ -278,5 +281,9 @@ anim_save("2017_courses.gif")
 ```{r, echo=FALSE, fig.alt="An animated plot that shows the course name length and course description length by deparment."}
 knitr::include_graphics("2017_courses.gif")
 ```
+
+Github Link: [here](https://github.com/tybenz12/Exercise6)
+
+.md Link: [here](https://github.com/tybenz12/Exercise6/blob/main/06_exercises.md)
 
 **DID YOU REMEMBER TO UNCOMMENT THE OPTIONS AT THE TOP?**

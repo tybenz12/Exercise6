@@ -141,7 +141,9 @@ PitchData2018 <- read_csv("PitchData2018.csv",
 
 tab_pitch <- PitchData2018 %>% 
   gt() %>% 
-  cols_hide(columns = vars(player_id, year, n_fastball_formatted, fastball_range_speed)) %>% 
+  cols_hide(columns = vars(player_id, year, 
+                           n_fastball_formatted, 
+                           fastball_range_speed)) %>% 
   tab_header(title = "2018 MLB Pitch Data",
     subtitle = md("Data provided by Baseball Savant")) %>% 
   tab_options(heading.background.color = "darkred")
@@ -150,12 +152,12 @@ tab_pitch
 ```
 
 ```{=html}
-<div id="eyrzatrmqf" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="onzkwtould" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#eyrzatrmqf .gt_table {
+#onzkwtould .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -180,7 +182,7 @@ tab_pitch
   border-left-color: #D3D3D3;
 }
 
-#eyrzatrmqf .gt_heading {
+#onzkwtould .gt_heading {
   background-color: #8B0000;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -192,7 +194,7 @@ tab_pitch
   border-right-color: #D3D3D3;
 }
 
-#eyrzatrmqf .gt_title {
+#onzkwtould .gt_title {
   color: #FFFFFF;
   font-size: 125%;
   font-weight: initial;
@@ -202,7 +204,7 @@ tab_pitch
   border-bottom-width: 0;
 }
 
-#eyrzatrmqf .gt_subtitle {
+#onzkwtould .gt_subtitle {
   color: #FFFFFF;
   font-size: 85%;
   font-weight: initial;
@@ -212,13 +214,13 @@ tab_pitch
   border-top-width: 0;
 }
 
-#eyrzatrmqf .gt_bottom_border {
+#onzkwtould .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#eyrzatrmqf .gt_col_headings {
+#onzkwtould .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -233,7 +235,7 @@ tab_pitch
   border-right-color: #D3D3D3;
 }
 
-#eyrzatrmqf .gt_col_heading {
+#onzkwtould .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -253,7 +255,7 @@ tab_pitch
   overflow-x: hidden;
 }
 
-#eyrzatrmqf .gt_column_spanner_outer {
+#onzkwtould .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -265,15 +267,15 @@ tab_pitch
   padding-right: 4px;
 }
 
-#eyrzatrmqf .gt_column_spanner_outer:first-child {
+#onzkwtould .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#eyrzatrmqf .gt_column_spanner_outer:last-child {
+#onzkwtould .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#eyrzatrmqf .gt_column_spanner {
+#onzkwtould .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -285,7 +287,7 @@ tab_pitch
   width: 100%;
 }
 
-#eyrzatrmqf .gt_group_heading {
+#onzkwtould .gt_group_heading {
   padding: 8px;
   color: #333333;
   background-color: #FFFFFF;
@@ -307,7 +309,7 @@ tab_pitch
   vertical-align: middle;
 }
 
-#eyrzatrmqf .gt_empty_group_heading {
+#onzkwtould .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -322,15 +324,15 @@ tab_pitch
   vertical-align: middle;
 }
 
-#eyrzatrmqf .gt_from_md > :first-child {
+#onzkwtould .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#eyrzatrmqf .gt_from_md > :last-child {
+#onzkwtould .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#eyrzatrmqf .gt_row {
+#onzkwtould .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -349,7 +351,7 @@ tab_pitch
   overflow-x: hidden;
 }
 
-#eyrzatrmqf .gt_stub {
+#onzkwtould .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -361,7 +363,7 @@ tab_pitch
   padding-left: 12px;
 }
 
-#eyrzatrmqf .gt_summary_row {
+#onzkwtould .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -371,7 +373,7 @@ tab_pitch
   padding-right: 5px;
 }
 
-#eyrzatrmqf .gt_first_summary_row {
+#onzkwtould .gt_first_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -381,7 +383,7 @@ tab_pitch
   border-top-color: #D3D3D3;
 }
 
-#eyrzatrmqf .gt_grand_summary_row {
+#onzkwtould .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -391,7 +393,7 @@ tab_pitch
   padding-right: 5px;
 }
 
-#eyrzatrmqf .gt_first_grand_summary_row {
+#onzkwtould .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -401,11 +403,11 @@ tab_pitch
   border-top-color: #D3D3D3;
 }
 
-#eyrzatrmqf .gt_striped {
+#onzkwtould .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#eyrzatrmqf .gt_table_body {
+#onzkwtould .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -414,7 +416,7 @@ tab_pitch
   border-bottom-color: #D3D3D3;
 }
 
-#eyrzatrmqf .gt_footnotes {
+#onzkwtould .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -428,13 +430,13 @@ tab_pitch
   border-right-color: #D3D3D3;
 }
 
-#eyrzatrmqf .gt_footnote {
+#onzkwtould .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding: 4px;
 }
 
-#eyrzatrmqf .gt_sourcenotes {
+#onzkwtould .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -448,41 +450,41 @@ tab_pitch
   border-right-color: #D3D3D3;
 }
 
-#eyrzatrmqf .gt_sourcenote {
+#onzkwtould .gt_sourcenote {
   font-size: 90%;
   padding: 4px;
 }
 
-#eyrzatrmqf .gt_left {
+#onzkwtould .gt_left {
   text-align: left;
 }
 
-#eyrzatrmqf .gt_center {
+#onzkwtould .gt_center {
   text-align: center;
 }
 
-#eyrzatrmqf .gt_right {
+#onzkwtould .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#eyrzatrmqf .gt_font_normal {
+#onzkwtould .gt_font_normal {
   font-weight: normal;
 }
 
-#eyrzatrmqf .gt_font_bold {
+#onzkwtould .gt_font_bold {
   font-weight: bold;
 }
 
-#eyrzatrmqf .gt_font_italic {
+#onzkwtould .gt_font_italic {
   font-style: italic;
 }
 
-#eyrzatrmqf .gt_super {
+#onzkwtould .gt_super {
   font-size: 65%;
 }
 
-#eyrzatrmqf .gt_footnote_marks {
+#onzkwtould .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
   font-size: 65%;
@@ -7636,7 +7638,7 @@ plot1 <- garden_harvest %>%
   mutate(cum_wt_lbs = cumsum(daily_wt_lbs)) %>% 
   ggplot(aes(x = date, y = cum_wt_lbs, color = variety)) +
   geom_line() +
-  labs(x = "Date of Harvest", y = "Cumulative Weight of Harvests (lbs)", color = "Type of Beet") +
+  labs(x = "Date of Harvest", y = "Cumulative Harvest Weight (lbs)", color = "Type of Beet") +
   ggtitle("Weight of Beet Harvest Over Time") +
   theme(plot.title = element_text(hjust = 0.5)) +
   scale_color_manual(values = c("#c9c30c", "#1bcc4a", "#85076e"))
@@ -7651,7 +7653,8 @@ plot2 <- garden_harvest %>%
   labs(x = "Total Harvest Weight (lbs)", y = "Variety of Beet") +
   theme(plot.title = element_text(hjust = 0.5))
 
-plot1/plot2
+plot1/plot2 +
+  plot_annotation(title = "Beet Harvests")
 ```
 
 <img src="06_exercises_files/figure-html/unnamed-chunk-5-1.png" title="Two plots showing the beet harvest over time for each variety and the total harvest weight by variety, ordered by earliest harvest date." alt="Two plots showing the beet harvest over time for each variety and the total harvest weight by variety, ordered by earliest harvest date."  />
@@ -7719,15 +7722,7 @@ course_availability <- fall2017 %>%
   html_elements("td.class-schedule-label:nth-child(7)") %>% 
   html_text2() %>% 
   str_sub(start = 14)
-head(course_availability)
-```
 
-```
-## [1] "Closed -5 / 25" "0 / 16"         "13 / 20"        "Closed 0 / 25" 
-## [5] "2 / 20"         "Closed 4 / 14"
-```
-
-```r
 course_geneds <- fall2017 %>% 
   html_elements("#content p:nth-child(2)") %>% 
   html_text2() %>% 
@@ -7738,7 +7733,8 @@ course_description <- fall2017 %>%
   html_elements(".collapsed p:nth-child(1)") %>% 
   html_text2() %>% 
   str_replace_all("\n", " ") %>% 
-  str_replace_all("\r", "")
+  str_replace_all("\r", "") %>% 
+  str_sub(start = 2)
 
 course_df <- tibble(Number=course_nums, Name=course_names, Days = course_days, 
                     Time = course_times, Room = course_room, 
@@ -7794,5 +7790,9 @@ anim_save("2017_courses.gif")
 
 
 <img src="2017_courses.gif" title="An animated plot that shows the course name length and course description length by deparment." alt="An animated plot that shows the course name length and course description length by deparment."  />
+
+Github Link: [here](https://github.com/tybenz12/Exercise6)
+
+.md Link: [here](https://github.com/tybenz12/Exercise6/blob/main/06_exercises.md)
 
 **DID YOU REMEMBER TO UNCOMMENT THE OPTIONS AT THE TOP?**
